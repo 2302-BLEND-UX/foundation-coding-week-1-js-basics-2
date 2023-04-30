@@ -4,3 +4,5 @@
 - onClicks 
 - Darkmode
 - let, const
+- arrays, loops
+- Pixel art app

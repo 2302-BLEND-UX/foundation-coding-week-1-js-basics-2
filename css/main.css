@@ -50,11 +50,61 @@ h1 {
 #toolbar #toggle-darkmode:hover {
   cursor: pointer;
 }
+#toolbar p {
+  margin-bottom: 10px;
+}
+#toolbar .colour {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  display: inline-block;
+}
+#toolbar .colour:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+#toolbar #black {
+  background-color: black;
+}
+#toolbar #tomato {
+  background-color: tomato;
+}
+#toolbar #greenyellow {
+  background-color: greenyellow;
+}
+#toolbar #yellow {
+  background-color: yellow;
+}
+#toolbar #orange {
+  background-color: orange;
+}
 
 img {
   transition: all 0.3s ease;
 }
 
 #header {
-  margin-top: 90px;
+  margin-top: 190px;
+}
+
+#loop-result {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+#canvas {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: 500px;
+}
+#canvas .cube {
+  width: 50px;
+  height: 50px;
+  border: 1px dashed #b2b2b2;
+}
+#canvas .cube:hover {
+  cursor: crosshair;
+  border-color: black;
 }

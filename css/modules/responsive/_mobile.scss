@@ -53,6 +53,45 @@ h1 {
             cursor: pointer;
         }
     }
+
+    p {
+        margin-bottom: 10px;
+    }
+
+    // colour palatte
+    .colour {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        margin-bottom: 5px;
+        display: inline-block;
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.5;
+        }
+    }
+
+    #black {
+        background-color: black;
+    }
+
+    #tomato {
+        background-color: tomato;
+    }
+
+    #greenyellow {
+        background-color: greenyellow;
+    }
+
+    #yellow {
+        background-color: yellow;
+    }
+
+    #orange {
+        background-color: orange;
+    }
+
 }
 
 img {
@@ -60,5 +99,29 @@ img {
 }
 
 #header {
-    margin-top: 90px;
+    margin-top: 190px;
+}
+
+#loop-result {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+// pixel art
+#canvas {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    width: 500px;
+
+    .cube {
+        width: 50px;
+        height: 50px;
+        border: 1px dashed #b2b2b2;
+
+        &:hover {
+            cursor: crosshair;
+            border-color: black;
+        }
+    }
 }
