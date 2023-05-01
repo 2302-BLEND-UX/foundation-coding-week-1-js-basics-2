@@ -33,6 +33,10 @@ h1 {
     margin-bottom: 50px;
 }
 
+h2 {
+    margin-bottom: 30px;
+}
+
 #toolbar {
     background-color: grey;
     position: fixed;
@@ -124,4 +128,18 @@ img {
             border-color: black;
         }
     }
+}
+
+// students
+#students-container {
+    .student {
+        background-color: whitesmoke;
+        padding: 10px;
+        margin-bottom: 5px;
+        border-radius: 5px;
+    }
+}
+
+input {
+    margin-bottom: 20px;
 }

@@ -59,39 +59,39 @@ const loopResult = document.getElementById("loop-result");
 
 // pixel art
 
-const canvas = document.getElementById("canvas");
+// const canvas = document.getElementById("canvas");
 
-for (i = 0; i < 100; i++) {
-    canvas.innerHTML += `
-    <div class="cube"></div>
-    `
-}
+// for (i = 0; i < 100; i++) {
+//     canvas.innerHTML += `
+//     <div class="cube"></div>
+//     `
+// }
 
-// grab all the cubes
-const allCubes = document.getElementsByClassName("cube");
-// grab all the colours from the palette
-const allColours = document.getElementsByClassName("colour");
+// // grab all the cubes
+// const allCubes = document.getElementsByClassName("cube");
+// // grab all the colours from the palette
+// const allColours = document.getElementsByClassName("colour");
 
-// declare our base colour
-let currentColour = "black";
+// // declare our base colour
+// let currentColour = "black";
 
-// loop over all allColours, and check for a click
-for (let i = 0; i < allColours.length; i++) {
-    allColours[i].addEventListener("click", function () {
-        currentColour = allColours[i].id;
-    })
-}
+// // loop over all allColours, and check for a click
+// for (let i = 0; i < allColours.length; i++) {
+//     allColours[i].addEventListener("click", function () {
+//         currentColour = allColours[i].id;
+//     })
+// }
 
-// looping over all the cubes
-for (let i = 0; i < allCubes.length; i++) {
-    // console logging each individual cube
-    // console.log(allCubes[i]);
-    // add event listener
-    allCubes[i].addEventListener("click", function () {
-        // console.log(`You clicked me! I am cube number ${i}`);
-        allCubes[i].style.background = currentColour;
-    })
-}
+// // looping over all the cubes
+// for (let i = 0; i < allCubes.length; i++) {
+//     // console logging each individual cube
+//     // console.log(allCubes[i]);
+//     // add event listener
+//     allCubes[i].addEventListener("click", function () {
+//         // console.log(`You clicked me! I am cube number ${i}`);
+//         allCubes[i].style.background = currentColour;
+//     })
+// }
 
 // arrays
 // const students = [
@@ -102,3 +102,31 @@ for (let i = 0; i < allCubes.length; i++) {
 
 // console.log({ students });
 // console.log(students[0]);
+
+// ------Arrays------
+
+const studentsContainer = document.getElementById("students-container");
+const submitButton = document.getElementById("submit");
+const newStudentInput = document.getElementById("new-student-input");
+
+let students = [];
+
+// use a loop to show the students on the screen
+function renderStudents() {
+    // empty the container first
+    studentsContainer.innerHTML = "";
+    // append all the students using a loop
+    for (let i = 0; i < students.length; i++) {
+        studentsContainer.innerHTML += `
+        <div class="student">
+        <i class="bi bi-file-earmark-person-fill"></i> ${students[i]}
+        </div>
+        `
+    }
+}
+
+// submit logic
+submitButton.addEventListener("click", function () {
+    students.push(newStudentInput.value);
+    renderStudents();
+})

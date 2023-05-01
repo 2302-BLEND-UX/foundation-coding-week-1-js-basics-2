@@ -1,3 +1,4 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 * {
   padding: 0;
   margin: 0;
@@ -29,6 +30,10 @@ h1 {
   font-size: 50px;
   font-weight: 100;
   margin-bottom: 50px;
+}
+
+h2 {
+  margin-bottom: 30px;
 }
 
 #toolbar {
@@ -107,4 +112,15 @@ img {
 #canvas .cube:hover {
   cursor: crosshair;
   border-color: black;
+}
+
+#students-container .student {
+  background-color: whitesmoke;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+input {
+  margin-bottom: 20px;
 }
